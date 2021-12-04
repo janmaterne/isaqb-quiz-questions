@@ -1,0 +1,176 @@
+Grundlagen
+=====================================================
+
+Was macht alles laut NIST eine Cloud aus?
++ erreichbar per Internet
++ Selbstbedienung nach Bedarf
++ Ressourcen-Pool für mehrere Kunden
++ Service wird gemessen bzw. überwacht
++ Hohe Elastizität
+- kostengünstig
+- standardisiert
+
+Welche Verantwortungen werden idR vom Cloudanbieter übernommen?
++ Bereitstellung von Infrastruktur
++ Ausfallsicherheit
++ Verfügbarkeit
++ Datensicherheit
++ IT-Sicherheit
+- Abwehr von Hackerangriffen auf die eigene Anwendung
+- Datenkonsistenz
+
+Was sind die Vor- und Nachteile einer Public Cloud?
++ Abgabe von Aufwand und Verantwortung 
++ Große Menge höherwertiger Dienste
++ Einfache Automatisierbarkeit
++ Hoher Reifegrad
++ Größere Skalierbarkeit als bei Private Cloud
+- Erfordert aufwändigeren Umgang mit sensiblen Daten, weil der Cloud-Anbieter Zugriff darauf hat
+- (meist) im Internet => höhere Sicherheitsanforderungen
+
+Wan empfiehlt sich Cloudeinsatz? 
+Ordne zu: Ja|Nein
+Ja wenn,
+§ Ressourcen kurzfristig abgerufen werden sollen
+§ Ressourcen auch mal abgeschaltet werden sollen
+§ Ein hoher Grad an Automatisierung gewünscht ist
+§ Man nicht den Keller voller aktuellem Blech hat
+§ Die Governance/Compliance es zulässt
+§ Nein wenn,
+§ Es von Compliance-Gesichtspunkten nicht möglich ist
+§ Man ein eigenes Rechenzentrum mit entsprechendem Personal besitzt
+=> dann eventuell Aufbau einer Private-Cloud mit Openshift
+§ Es keine besonderen Skalierungsanforderungen gibt
+§ Der Ressourcenbedarf relativ stabil ist
+
+
+Wobei helfen Container?
++ Anwendung inkl. Software-Abhängigkeiten paketieren
++ Anwendung verteilen
++ Anwendung überall reproduzierbar starten
++ Externe Systemabhängigkeiten (z.B. DB) isolieren
++ In verschiedenen Umgebungen testen
++ Angriffsvektoren für Sicherheit minimieren
+
+
+Vorteile von der Public Cloud
+Nachteile von der Public Cloud
+Vorteile von der Private Cloud
+Nachteile von der Private Cloud
+- Verfügbarkeit
+- Geo-Redundanz
+- Pay as use
+- managed services
+- security der infrastruktur
+- vendor lockin
+- personeller Aufwand
+
+Was sind Eigenschaften einer 12-factor-App?
+
+Welche der folgenden sind Reslience Muster?
+
+
+
+
+Architekturkonzepte
+=====================================================
+Was gilt für MicroServices?
+J - Ist ein Architekturstil
+J - werden unabhängig voneinander deployt
+J - hält seine Daten in einer eigenen Datenbank/DB-Schema
+N - werden in einer einheitlichen Sprache umgesetzt
+N - wird von einem Entwickler alleine realisiert   
+
+
+
+Was gilt für die Independent System Architecture (ISA)?
+Ordne zu: Muss|Sollte|Egal
+
+1. Das System muss in verschiedene Module zerlegt werden, die Schnittstellen bereitstellen
+2. Das System muss zwei klar getrennte Ebenen von Architekturentscheidungen haben
+a. Macroarchitektur
+b. Microarchitektur
+3. Die Unabhängigkeit zwischen Modulen muss maximiert werden. Dies erreicht man durch
+getrennte Prozesse, Container und virtuelle Maschinen
+4. Die Integration und Kommunikation muss für das System begrenzt und vereinheitlicht werden
+5. Metadaten, z.B. zur Authentifizierung müssen modulübergreifend vereinheitlicht werden
+6. Jedes Modul muss seine eigene Continuous Delivery Pipeline haben
+7. Der Betrieb (Konfiguration, Deployment, Logging, ...) sollte modulübergreifend vereinheitlicht
+werden
+8. Standards für Betrieb, Integration oder Kommunikation sollten lediglich auf Schnittstellenebene
+vorgeschrieben sein
+9. Module müssen resilient sein
+
+
+Was gehört in die Makro- oder Mikroarchitektur?
+Ordne zu: Makro|Mikro
+Makroebene
+§ Einsatz der Gesamtlösung wird eingeschränkt
+§ Unternehmensweite Standards
+Mikroebene
+§ Optimale Lösung für den einzelnen Bounded Context
+§ Sorgt für Unabhängigkeit der Teams
+§ Beispiele
+§ Die Programmiersprache
+§ Die Datenbank
+§ Look & Feel
+§ Dokumentation
+
+
+
+
+Cloud Native Journey
+=====================================================
+Wie ist der Begriff "Cloud Native" definiert?
+J - gar nicht
+N ... 
+
+
+Was gilt für eine 12-Factor-App?
+§ I. Codebase: Eine im Versionsmanagementsystem verwaltete Codebase, viele Deployments
+§ II. Abhängigkeiten: Abhängigkeiten explizit deklarieren und isolieren
+§ III. Konfiguration: Die Konfiguration in Umgebungsvariablen ablegen
+§ IV. Unterstützende Dienste: Unterstützende Dienste als angehängte Ressourcen behandeln
+§ V. Build, release, run: Build- und Run-Phase strikt trennen
+§ VI. Prozesse: Die App als einen oder mehrere Prozesse ausführen
+§ VII. Bindung an Ports: Dienste durch das Binden von Ports exportieren
+§ VIII. Nebenläufigkeit: Mit dem Prozess-Modell skalieren
+§ IX. Einweggebrauch: Robuster mit schnellem Start und problemlosen Stopp
+§ X. Dev-Prod-Vergleichbarkeit: Entwicklung, Staging und Produktion so ähnlich wie möglich halten
+§ XI. Logs: Logs als Strom von Ereignissen behandeln
+§ XII. Admin-Prozesse: Admin/Management-Aufgaben als einmalige Vorgänge behandeln
+
+
+Ordne die Eigenschaften den jeweiligen Storage-Typen zu.
+Ordne zu: File|Block|Object
+F Gut für kleine Datenmengen
+O Besonders gut für große Datenmengen
+O Einfache Verteilung über viele Regionen
+B Skalierbarkeit durch Adressraum begrenzt
+F Nur wenige vordefinierte Metadaten
+B keine Metadaten
+O frei definiertbare Metadaten
+
+
+
+
+
+
+
+Betrieb
+=====================================================
+Ordne zu
+Logging/Tracing|Monitoring
+L   Fehlersuche
+L   Fehleranalyse
+L   Debugging
+L   Auditing
+M   Überwachung
+M   Fehlererkennung
+M   Alerting
+M   Profiling
+
+
+
+Grundlagen
+=====================================================

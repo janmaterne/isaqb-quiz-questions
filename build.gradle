@@ -1,0 +1,11 @@
+plugins {
+	id 'java'
+}
+
+group = 'org.isaqb.onlineexam'
+version = '0.1'
+sourceCompatibility = '16'
+
+repositories {
+	mavenCentral()
+}
