@@ -9,7 +9,7 @@
 | 1 Punkte
 |===
 
-Was gilt für Value Objects?
+Was gilt für Value Objects im Domain Driven Design?
 
 [cols="2a,2a,1, 7", frame=none, grid=none]
 |===
@@ -60,7 +60,7 @@ Was gilt für Value Objects?
 | 1 Punkte
 |===
 
-What is correct for value objects?
+What is correct for value objects in context of domain driven design?
 
 [cols="2a,2a,1, 7", frame=none, grid=none]
 |===

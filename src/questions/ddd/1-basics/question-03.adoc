@@ -11,7 +11,7 @@
 |===
 
 
-Wer beeinflusst die Ubiquitous Language?
+Wer beeinflusst die Ubiquitous Language im Domain Driven Design?
 
 [cols="1a,1,8", frame="none", grid="none"]
 |===
@@ -52,7 +52,7 @@ Wer beeinflusst die Ubiquitous Language?
 |===
 
 
-How many definitions of “software architecture” exist?
+Who influences the "ubiquitous language" in domain driven design?
 
 [cols="1a,1,8", frame="none", grid="none"]
 |===

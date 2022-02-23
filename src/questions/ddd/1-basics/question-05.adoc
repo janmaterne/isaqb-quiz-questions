@@ -9,7 +9,7 @@
 | 1 Punkte
 |===
 
-Was gilt für Entities?
+Was gilt für Entities im Domain Driven Design?
 
 [cols="2a,2a,1, 7", frame=none, grid=none]
 |===
@@ -60,7 +60,7 @@ Was gilt für Entities?
 | 1 Punkte
 |===
 
-What is correct for entities?
+What is correct for entities in context of domain driven design?
 
 [cols="2a,2a,1, 7", frame=none, grid=none]
 |===
